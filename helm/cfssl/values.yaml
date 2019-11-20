@@ -14,7 +14,7 @@ replicas:
   cfssl: 1
 
 # Do NOT set the image hash manually. Jenkins will do this for you.
-imageVersion: "latest"
+imageVersion: "719d1ba"
 imageName: "cfssl-intelity"
 imagePullPolicy: "Always"
 
