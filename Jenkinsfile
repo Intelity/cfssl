@@ -4,7 +4,7 @@
 
 def appName = "cfssl"
 def allServices = ["cfssl"]
-def defaultBranch = "master"
+def defaultBranch = "apatrynets/helm-chart"
 
 KEYPR_IS_DEFAULT_BRANCH = env.BRANCH_NAME == defaultBranch
 
