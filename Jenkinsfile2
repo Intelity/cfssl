@@ -48,7 +48,7 @@ node{
         // Set image name
         imageId = "${appName}:${commitId}".trim()
         // Build the image once.
-        appEnv = dockerBuild(appName, commitId, ['dockerFile': "Dockerfile.alpine"])
+        appEnv = dockerBuild(appName, commitId)
         // Tag it for multiple deployments (we reuse the same image in all the deployments).
         for (dep in allServices) {
             if (dep != appName) {
