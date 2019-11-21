@@ -32,7 +32,7 @@ spec:
             - name: secret-volume
               mountPath: /etc/cfssl-config
               readOnly: true
-          image: registry.keypr.com/{{ .Values.imageName }}:{{ .Values.imageVersion }}
+          image: cfssl/{{ .Values.imageName }}:{{ .Values.imageVersion }}
           imagePullPolicy: {{ .Values.imagePullPolicy }}
           command: [ "cfssl", "serve", "-ca", "/etc/cfssl-config/ca-cert", "-ca-key", "/etc/cfssl-config/ca-key", "-config", "/etc/cfssl-config/ca-config", "-port", "8888", "-address", "0.0.0.0" ]
           ports:
