@@ -2,7 +2,7 @@
 generator: "helm"
 updated: {{ now | htmlDate | quote }}
 chart: {{ .Chart.Name | quote }}
-chart_version: {{ .Chart.Version | quote }}
+chart_version: "1.0"
 release: {{ .Release.Name | quote }}
 release_version: "{{ .Chart.Version }}_{{ .Release.Time.Seconds }}"
 ci_user: {{ .Values.ciUser | quote }}
