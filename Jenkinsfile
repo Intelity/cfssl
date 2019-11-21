@@ -52,7 +52,7 @@ node{
         // Tag it for multiple deployments (we reuse the same image in all the deployments).
         for (dep in allServices) {
             if (dep != appName) {
-                sh "docker tag $imageId $dep:$commitId"
+                sh "docker tag latest $dep:$commitId"
             }
         }
     }
